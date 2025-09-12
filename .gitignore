@@ -1,0 +1,9 @@
+.vercel
+node_modules/
+*.log
+.DS_Store
+.env
+old-versions/
+temp-files/
+.vercel
+.env*.local

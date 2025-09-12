@@ -1,0 +1,14 @@
+{
+  "name": "synqai-academy-lp",
+  "version": "1.0.0",
+  "description": "SYNQAI アカデミア ランディングページ",
+  "main": "synqai-academy-revised.html",
+  "scripts": {
+    "dev": "python -m http.server 8080",
+    "deploy": "vercel --prod",
+    "deploy-preview": "vercel"
+  },
+  "keywords": ["AI", "研修", "SYNQAI", "ランディングページ"],
+  "author": "SYNQAI",
+  "license": "MIT"
+}
