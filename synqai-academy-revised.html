@@ -516,11 +516,26 @@
             background: #667eea;
             transform: scale(1.2);
         }
+        .before-after-with-video {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+        }
         .before-after {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
             align-items: center;
+        }
+        .video-preview {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .video-wrapper {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         @media (max-width: 768px) {
             .before-after {
@@ -959,43 +974,48 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }</style
 <body class="bg-gray-50">
     <!-- Header -->
     <header class="bg-white shadow-sm">
-        <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-gradient">SYNQAIアカデミア</div>
-            <div class="space-x-4">
-                <a href="https://kkcgcyfv.gensparkspace.com/?access_token=FQmgVcMGb30Ubfvkw5WPMDanKjqUhKJszdi%2BE3tHNkH%2F0TOQx%2FA9g%2B1mgqaZblLSo7e%2B5pjmQjX4%2FaU%2F3t3rA7E4KORT6JKSk7rAi%2BKBXK%2BwN4brEFTcbFgFQrw%3D#contact" class="btn-secondary px-4 py-2 rounded-lg">お問い合わせ</a>
-                <a href="https://kkcgcyfv.gensparkspace.com/?access_token=FQmgVcMGb30Ubfvkw5WPMDanKjqUhKJszdi%2BE3tHNkH%2F0TOQx%2FA9g%2B1mgqaZblLSo7e%2B5pjmQjX4%2FaU%2F3t3rA7E4KORT6JKSk7rAi%2BKBXK%2BwN4brEFTcbFgFQrw%3D#contact" class="btn-primary text-white px-6 py-2 rounded-lg">無料相談申込</a>
+        <nav class="max-w-6xl mx-auto px-4 py-3 md:py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2 md:space-x-3">
+                    <img src="assets/images/synqai-logo.png" alt="SYNQAI" class="h-8 md:h-10 w-auto">
+                    <div class="text-lg md:text-2xl font-bold text-gradient">SYNQAIアカデミア</div>
+                </div>
+                <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 md:space-x-4">
+                    <a href="https://kkcgcyfv.gensparkspace.com/?access_token=FQmgVcMGb30Ubfvkw5WPMDanKjqUhKJszdi%2BE3tHNkH%2F0TOQx%2FA9g%2B1mgqaZblLSo7e%2B5pjmQjX4%2FaU%2F3t3rA7E4KORT6JKSk7rAi%2BKBXK%2BwN4brEFTcbFgFQrw%3D#contact" class="btn-secondary px-3 py-1 md:px-4 md:py-2 rounded-lg text-sm md:text-base">お問い合わせ</a>
+                    <a href="https://kkcgcyfv.gensparkspace.com/?access_token=FQmgVcMGb30Ubfvkw5WPMDanKjqUhKJszdi%2BE3tHNkH%2F0TOQx%2FA9g%2B1mgqaZblLSo7e%2B5pjmQjX4%2FaU%2F3t3rA7E4KORT6JKSk7rAi%2BKBXK%2BwN4brEFTcbFgFQrw%3D#contact" class="btn-primary text-white px-4 py-1 md:px-6 md:py-2 rounded-lg text-sm md:text-base">無料相談申込</a>
+                </div>
             </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-gradient text-white py-20">
+    <section class="hero-gradient text-white py-12 md:py-20">
         <div class="max-w-6xl mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 md:mb-6">
                 AIで実現！1人・月58時間、<br>
                 <span class="text-yellow-300">"売上を生まない時間"</span>を即なくす！
             </h1>
-            <p class="text-xl md:text-2xl mb-8 opacity-90">
-                1時間かかっていた営業訪問の事前調査は、AIならたったの3分。<br>
-                半日かけていた報告資料もAIが3分に。<br>
-                SYNQAIアカデミアは、社内のAI活用で時間のかかる単純作業を短縮若しくはカットし、<br>
+            <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 opacity-90 px-2 sm:px-4 md:px-0">
+                1時間かかっていた営業訪問の事前調査は、AIならたったの3分。<br class="hidden sm:block">
+                半日かけていた報告資料もAIが3分に。<br class="hidden sm:block">
+                SYNQAIアカデミアは、社内のAI活用で時間のかかる単純作業を短縮若しくはカットし、<br class="hidden md:block">
                 どの様な会社も、どの様な社員も、次のステージ・価値を生む出す仕事に向わしめる実践的AIプログラムです。
             </p>
 
             <div class="mb-8">
                 <div class="text-lg mb-2">法人・個人合わせて</div>
-                <div class="text-4xl font-bold text-yellow-300">1000名以上</div>
+                <div class="text-3xl md:text-4xl font-bold text-yellow-300">1000名以上</div>
                 <div class="text-lg">のAI導入支援実績</div>
             </div>
 
-            <div class="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
-                <a href="https://kkcgcyfv.gensparkspace.com/?access_token=FQmgVcMGb30Ubfvkw5WPMDanKjqUhKJszdi%2BE3tHNkH%2F0TOQx%2FA9g%2B1mgqaZblLSo7e%2B5pjmQjX4%2FaU%2F3t3rA7E4KORT6JKSk7rAi%2BKBXK%2BwN4brEFTcbFgFQrw%3D#contact" class="btn-primary inline-block text-white px-8 py-4 rounded-lg text-lg font-semibold">
+            <div class="flex flex-col space-y-3 md:space-y-0 md:flex-row md:space-x-4 md:justify-center px-2 sm:px-4 md:px-0">
+                <a href="https://kkcgcyfv.gensparkspace.com/?access_token=FQmgVcMGb30Ubfvkw5WPMDanKjqUhKJszdi%2BE3tHNkH%2F0TOQx%2FA9g%2B1mgqaZblLSo7e%2B5pjmQjX4%2FaU%2F3t3rA7E4KORT6JKSk7rAi%2BKBXK%2BwN4brEFTcbFgFQrw%3D#contact" class="btn-primary inline-block text-white px-4 py-3 md:px-8 md:py-4 rounded-lg text-sm sm:text-base md:text-lg font-semibold w-full md:w-auto">
                     <span style="margin-right: 8px;">💬</span>
-                    「AI活用の悩みを30分で解消する」無料相談に申し込む（毎月10社限定）
+                    <span class="inline-block">「AI活用の悩みを30分で解消する」<br class="sm:hidden">無料相談に申し込む<br class="sm:hidden">（毎月10社限定）</span>
                 </a>
-                <a href="https://kkcgcyfv.gensparkspace.com/?access_token=FQmgVcMGb30Ubfvkw5WPMDanKjqUhKJszdi%2BE3tHNkH%2F0TOQx%2FA9g%2B1mgqaZblLSo7e%2B5pjmQjX4%2FaU%2F3t3rA7E4KORT6JKSk7rAi%2BKBXK%2BwN4brEFTcbFgFQrw%3D#materials" class="btn-secondary inline-block px-8 py-4 rounded-lg text-lg font-semibold bg-white text-blue-600 hover:bg-blue-600 hover:text-white">
+                <a href="https://kkcgcyfv.gensparkspace.com/?access_token=FQmgVcMGb30Ubfvkw5WPMDanKjqUhKJszdi%2BE3tHNkH%2F0TOQx%2FA9g%2B1mgqaZblLSo7e%2B5pjmQjX4%2FaU%2F3t3rA7E4KORT6JKSk7rAi%2BKBXK%2BwN4brEFTcbFgFQrw%3D#materials" class="btn-secondary inline-block px-4 py-3 md:px-8 md:py-4 rounded-lg text-sm sm:text-base md:text-lg font-semibold bg-white text-blue-600 hover:bg-blue-600 hover:text-white w-full md:w-auto">
                     <span style="margin-right: 8px;">📥</span>
-                    研修内容に関する資料をダウンロードする
+                    <span class="inline-block">研修内容に関する資料を<br class="sm:hidden">ダウンロードする</span>
                 </a>
             </div>
         </div>
@@ -1041,7 +1061,7 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }</style
     </section>
 
     <!-- 導入実績 -->
-    <section class="py-16">
+    <section class="py-10 md:py-16">
         <div class="max-w-6xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold mb-8">導入実績・提携先</h2>
             
@@ -1088,12 +1108,12 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }</style
                 </div>
             </div>
             
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="card-shadow p-6 rounded-xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                <div class="card-shadow p-4 md:p-6 rounded-xl">
                     <h3 class="text-xl font-bold mb-4" style="color: var(--accent-bioluminescence);">導入実績</h3>
                     <p style="color: var(--text-light);">法人・個人合わせて累計1000名以上へのAI導入を支援。</p>
                 </div>
-                <div class="card-shadow p-6 rounded-xl">
+                <div class="card-shadow p-4 md:p-6 rounded-xl">
                     <h3 class="text-xl font-bold mb-4" style="color: var(--accent-bioluminescence);">導入企業</h3>
                     <p style="color: var(--text-light);">一部上場の大企業から急成長ベンチャーまで、あらゆる組織で結果を出してきた実績があります。</p>
                 </div>
@@ -1109,12 +1129,12 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }</style
     </section>
 
     <!-- 問題提起 -->
-    <section class="py-16 bg-gray-100">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">
+    <section class="py-10 md:py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">
                 生成AIを「なんとなく知ってる、触ってる」で<span class="text-red-600">止</span>まっていませんか？
             </h2>
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 <div class="card-shadow bg-white p-8 rounded-xl">
                     <ul class="space-y-4">
                         <li class="flex items-start">
@@ -1143,9 +1163,9 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }</style
     </section>
 
     <!-- AI包囲網セクション -->
-    <section class="py-16 warning-bg text-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">
+    <section class="py-10 md:py-16 warning-bg text-white">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">
                 「うちには関係ない」では済まされない時代の到来
             </h2>
             <div class="text-center mb-8">
@@ -1157,7 +1177,7 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }</style
                 <img src="assets/images/ai-warning-image.png" alt="AI包囲網の警告" class="mx-auto rounded-lg shadow-2xl max-w-full md:max-w-4xl">
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
                 <div class="card-shadow bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl">
                     <div class="text-center mb-4">
                         <i class="fas fa-building text-4xl text-yellow-300"></i>
@@ -1195,7 +1215,7 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }</style
     </section>
 
     <!-- ソリューション提示 -->
-    <section class="py-16 light-section">
+    <section class="py-10 md:py-16 light-section">
         <div class="max-w-6xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold mb-8">
                 「取り残される不安」、私たちが解決します。
@@ -1220,9 +1240,9 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }</style
     </section>
 
     <!-- サービス内容 -->
-    <section class="py-16 bg-gray-100">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">具体的なサービス内容</h2>
+    <section class="py-10 md:py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">具体的なサービス内容</h2>
             
             <div class="mb-12 text-center">
                 <h3 class="text-2xl font-bold mb-4 text-blue-600">コンセプト</h3>
@@ -1258,7 +1278,7 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }</style
 
             <div class="card-shadow bg-white p-8 rounded-xl">
                 <h3 class="text-2xl font-bold mb-6 text-center text-blue-600">習得できる5つのスキル</h3>
-                <div class="grid md:grid-cols-5 gap-6">
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
                     <div class="text-center">
                         <i class="fas fa-cogs text-3xl text-blue-600 mb-3"></i>
                         <h4 class="font-bold mb-2">プロンプト設計力</h4>
@@ -1293,12 +1313,12 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }</style
     </section>
 
     <!-- デモスライドセクション -->
-    <section class="py-16 text-white" style="background: linear-gradient(135deg, var(--deep-ocean-2) 0%, var(--deep-ocean-3) 100%);">
-        <div class="max-w-6xl mx-auto px-4">
+    <section class="py-10 md:py-16 text-white" style="background: linear-gradient(135deg, var(--deep-ocean-2) 0%, var(--deep-ocean-3) 100%);">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
             <h2 class="text-3xl font-bold text-center mb-4">研修で、あなたの会社の日常はこう変わる</h2>
-            <p class="text-center text-lg mb-8 opacity-90">もう、面倒な作業に時間を奪われない。実際の業務改善の様子をご覧ください。</p>
+            <p class="text-center text-base md:text-lg mb-6 md:mb-8 opacity-90">もう、面倒な作業に時間を奪われない。実際の業務改善の様子をご覧ください。</p>
             
-            <div class="slider-container bg-white rounded-2xl text-gray-800" style="height: 400px;">
+            <div class="slider-container bg-white rounded-2xl text-gray-800" style="min-height: 600px; height: auto;">
                 <div class="slider-content" id="sliderContent" style="transform: translateX(-400%);">
                     <!-- Slide 1: 営業の事前調査 -->
                     <div class="slide">
@@ -1307,45 +1327,63 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }</style
                                 <div class="text-center">
                                     <h3 class="text-2xl font-bold mb-4 text-red-600">Before</h3>
                                     <i class="fas fa-clock text-4xl text-red-600 mb-4"></i>
-                                    <h4 class="text-xl font-bold mb-2">営業の事前調査</h4>
+                                    <h4 class="text-lg md:text-xl font-bold mb-2">営業の事前調査</h4>
                                     <p class="text-gray-600">30分かけて手動でWeb検索・情報収集</p>
-                                    <div class="mt-4 text-3xl font-bold text-red-600">30分</div>
+                                    <div class="mt-4 text-2xl md:text-3xl font-bold text-red-600">30分</div>
                                 </div>
                                 <div class="text-center">
                                     <h3 class="text-2xl font-bold mb-4 text-green-600">After</h3>
                                     <i class="fas fa-magic text-4xl text-green-600 mb-4"></i>
-                                    <h4 class="text-xl font-bold mb-2">AIで事前調査</h4>
+                                    <h4 class="text-lg md:text-xl font-bold mb-2">AIで事前調査</h4>
                                     <p class="text-gray-600">AIに会社名を入力、3分で調査レポート完成</p>
-                                    <div class="mt-4 text-3xl font-bold text-green-600">3分</div>
+                                    <div class="mt-4 text-2xl md:text-3xl font-bold text-green-600">3分</div>
                                     <div class="text-sm text-green-600 font-bold">90%削減</div>
                                 </div>
                             </div>
                             <div class="video-preview mt-4">
-                                <a href="#" class="inline-block bg-gray-200 rounded-lg p-4 hover:bg-gray-300 transition">
-                                    <i class="fas fa-play-circle text-4xl text-gray-600"></i>
-                                    <p class="text-sm mt-2">動画で確認</p>
-                                </a>
+                                <div class="video-wrapper" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 8px;">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/vh7jqEcfc8M" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                    </iframe>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
                     <!-- Slide 2: 報告資料作成 -->
                     <div class="slide">
-                        <div class="before-after">
-                            <div class="text-center">
-                                <h3 class="text-2xl font-bold mb-4 text-red-600">Before</h3>
-                                <i class="fas fa-file-powerpoint text-4xl text-red-600 mb-4"></i>
-                                <h4 class="text-xl font-bold mb-2">報告資料作成</h4>
-                                <p class="text-gray-600">半日かけてPowerPoint作成・デザイン調整</p>
-                                <div class="mt-4 text-3xl font-bold text-red-600">半日</div>
+                        <div class="before-after-with-video">
+                            <div class="before-after">
+                                <div class="text-center">
+                                    <h3 class="text-2xl font-bold mb-4 text-red-600">Before</h3>
+                                    <i class="fas fa-file-powerpoint text-4xl text-red-600 mb-4"></i>
+                                    <h4 class="text-lg md:text-xl font-bold mb-2">報告資料作成</h4>
+                                    <p class="text-gray-600">半日かけてPowerPoint作成・デザイン調整</p>
+                                    <div class="mt-4 text-2xl md:text-3xl font-bold text-red-600">半日</div>
+                                </div>
+                                <div class="text-center">
+                                    <h3 class="text-2xl font-bold mb-4 text-green-600">After</h3>
+                                    <i class="fas fa-robot text-4xl text-green-600 mb-4"></i>
+                                    <h4 class="text-lg md:text-xl font-bold mb-2">AI自動生成</h4>
+                                    <p class="text-gray-600">AIが3分で構成からデザインまで自動生成</p>
+                                    <div class="mt-4 text-2xl md:text-3xl font-bold text-green-600">3分</div>
+                                    <div class="text-sm text-green-600 font-bold">98%削減</div>
+                                </div>
                             </div>
-                            <div class="text-center">
-                                <h3 class="text-2xl font-bold mb-4 text-green-600">After</h3>
-                                <i class="fas fa-robot text-4xl text-green-600 mb-4"></i>
-                                <h4 class="text-xl font-bold mb-2">AI自動生成</h4>
-                                <p class="text-gray-600">AIが3分で構成からデザインまで自動生成</p>
-                                <div class="mt-4 text-3xl font-bold text-green-600">3分</div>
-                                <div class="text-sm text-green-600 font-bold">98%削減</div>
+                            <div class="video-preview mt-4">
+                                <div class="video-wrapper" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 8px;">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/MBvQlOrT5FI" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                    </iframe>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1356,14 +1394,14 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }</style
                             <div class="text-center">
                                 <h3 class="text-2xl font-bold mb-4 text-red-600">Before</h3>
                                 <i class="fas fa-calculator text-4xl text-red-600 mb-4"></i>
-                                <h4 class="text-xl font-bold mb-2">請求書処理</h4>
+                                <h4 class="text-lg md:text-xl font-bold mb-2">請求書処理</h4>
                                 <p class="text-gray-600">Excelで手打ち入力、計算ミスのチェック作業</p>
                                 <div class="mt-4 text-2xl font-bold text-red-600">手作業</div>
                             </div>
                             <div class="text-center">
                                 <h3 class="text-2xl font-bold mb-4 text-green-600">After</h3>
                                 <i class="fas fa-scan text-4xl text-green-600 mb-4"></i>
-                                <h4 class="text-xl font-bold mb-2">AI自動処理</h4>
+                                <h4 class="text-lg md:text-xl font-bold mb-2">AI自動処理</h4>
                                 <p class="text-gray-600">AIが書類を読み取り、一括で処理完了</p>
                                 <div class="mt-4 text-2xl font-bold text-green-600">自動化</div>
                                 <div class="text-sm text-green-600 font-bold">ミス削減</div>
@@ -1377,14 +1415,14 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }</style
                             <div class="text-center">
                                 <h3 class="text-2xl font-bold mb-4 text-red-600">Before</h3>
                                 <i class="fas fa-pen-alt text-4xl text-red-600 mb-4"></i>
-                                <h4 class="text-xl font-bold mb-2">会議の議事録</h4>
+                                <h4 class="text-lg md:text-xl font-bold mb-2">会議の議事録</h4>
                                 <p class="text-gray-600">会議中のメモ取り + 後日の清書作業</p>
                                 <div class="mt-4 text-2xl font-bold text-red-600">会議後作業</div>
                             </div>
                             <div class="text-center">
                                 <h3 class="text-2xl font-bold mb-4 text-green-600">After</h3>
                                 <i class="fas fa-microphone text-4xl text-green-600 mb-4"></i>
-                                <h4 class="text-xl font-bold mb-2">リアルタイム生成</h4>
+                                <h4 class="text-lg md:text-xl font-bold mb-2">リアルタイム生成</h4>
                                 <p class="text-gray-600">会議終了と同時にAIが議事録・報告書を自動完成</p>
                                 <div class="mt-4 text-2xl font-bold text-green-600">即座に完成</div>
                                 <div class="text-sm text-green-600 font-bold">後作業なし</div>
@@ -1398,14 +1436,14 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }</style
                             <div class="text-center">
                                 <h3 class="text-2xl font-bold mb-4 text-red-600">Before</h3>
                                 <i class="fas fa-lightbulb text-4xl text-red-600 mb-4"></i>
-                                <h4 class="text-xl font-bold mb-2">SNS投稿企画</h4>
+                                <h4 class="text-lg md:text-xl font-bold mb-2">SNS投稿企画</h4>
                                 <p class="text-gray-600">アイデア出し + 文章作成 + 画像準備で数時間</p>
                                 <div class="mt-4 text-2xl font-bold text-red-600">数時間</div>
                             </div>
                             <div class="text-center">
                                 <h3 class="text-2xl font-bold mb-4 text-green-600">After</h3>
                                 <i class="fas fa-share-alt text-4xl text-green-600 mb-4"></i>
-                                <h4 class="text-xl font-bold mb-2">AI一気生成</h4>
+                                <h4 class="text-lg md:text-xl font-bold mb-2">AI一気生成</h4>
                                 <p class="text-gray-600">AIが企画から投稿用画像まで一気に生成</p>
                                 <div class="mt-4 text-2xl font-bold text-green-600">数分</div>
                                 <div class="text-sm text-green-600 font-bold">95%削減</div>
@@ -1437,15 +1475,15 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }</style
     </section>
 
     <!-- 料金 -->
-    <section class="py-16 bg-gray-100">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">料金・シミュレーション</h2>
+    <section class="py-10 md:py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">料金・シミュレーション</h2>
             
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 <div class="card-shadow bg-white p-8 rounded-xl">
                     <h3 class="text-2xl font-bold mb-6 text-center text-blue-600">正規料金</h3>
                     <div class="text-center mb-6">
-                        <div class="text-4xl font-bold text-blue-600">400,000円</div>
+                        <div class="text-3xl md:text-4xl font-bold text-blue-600">400,000円</div>
                         <div class="text-gray-600">（税別・1人あたり）</div>
                         <div class="text-sm text-gray-500 mt-2">※最低2名様からのお申し込み</div>
                     </div>
@@ -1461,7 +1499,7 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }</style
                 <div class="card-shadow bg-gradient-to-br from-green-500 to-green-600 text-white p-8 rounded-xl">
                     <h3 class="text-2xl font-bold mb-6 text-center">助成金サポート</h3>
                     <div class="text-center mb-6">
-                        <div class="text-4xl font-bold text-yellow-300">10万円前後</div>
+                        <div class="text-3xl md:text-4xl font-bold text-yellow-300">10万円前後</div>
                         <div class="text-lg">実質負担金額</div>
                     </div>
                     <p class="mb-4">国の助成金活用で費用負担を大幅に軽減可能。実質1人あたり10万円前後で受講できる場合があります。</p>
@@ -1474,23 +1512,23 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }</style
     </section>
 
     <!-- 導入事例 -->
-    <section class="py-16 light-section">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">導入事例・お客様の声</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="card-shadow bg-gray-50 p-6 rounded-xl">
+    <section class="py-10 md:py-16 light-section">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">導入事例・お客様の声</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+                <div class="card-shadow bg-gray-50 p-4 md:p-6 rounded-xl">
                     <h3 class="text-lg font-bold mb-2 text-blue-600">株式会社RESTA</h3>
                     <p class="text-sm text-gray-600 mb-4">就労支援事業</p>
                     <p class="text-sm mb-4">求職者情報の分析と企業推薦を自動化し、<strong>週15時間かかっていた業務を週30分に短縮</strong>しました。</p>
                     <div class="text-2xl font-bold text-green-600">95%削減</div>
                 </div>
-                <div class="card-shadow bg-gray-50 p-6 rounded-xl">
+                <div class="card-shadow bg-gray-50 p-4 md:p-6 rounded-xl">
                     <h3 class="text-lg font-bold mb-2 text-blue-600">株式会社merone</h3>
                     <p class="text-sm text-gray-600 mb-4">副業人材育成</p>
                     <p class="text-sm mb-4">Excelでの手打ち請求書作成を自動化し、<strong>お客様対応や請求書作成が10分の1に削減</strong>されました。</p>
                     <div class="text-2xl font-bold text-green-600">90%削減</div>
                 </div>
-                <div class="card-shadow bg-gray-50 p-6 rounded-xl">
+                <div class="card-shadow bg-gray-50 p-4 md:p-6 rounded-xl">
                     <h3 class="text-lg font-bold mb-2 text-blue-600">株式会社Career Direction</h3>
                     <p class="text-sm text-gray-600 mb-4">フィットネス・パーソナルジム</p>
                     <p class="text-sm mb-4">Instagramの企画〜投稿作成をAIで自動化。<strong>運用工数と社長の確認業務を大幅に削減</strong>し、アウトプットの質も向上しました。</p>
@@ -1501,23 +1539,23 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }</style
     </section>
 
     <!-- 選ばれる理由 -->
-    <section class="py-16 bg-blue-600 text-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">SYNQAIアカデミアの3つの強み</h2>
-            <div class="grid md:grid-cols-3 gap-8">
+    <section class="py-10 md:py-16 bg-blue-600 text-white">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">SYNQAIアカデミアの3つの強み</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
                 <div class="text-center">
                     <i class="fas fa-tasks text-4xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-4">一気通貫のコミット体制</h3>
+                    <h3 class="text-lg md:text-xl font-bold mb-3 md:mb-4">一気通貫のコミット体制</h3>
                     <p class="text-sm opacity-90">事前学習から研修、テスト、上長報告までをワンパッケージで提供。「絶対にやり切る」体制で、単発の研修で終わらせません。</p>
                 </div>
                 <div class="text-center">
                     <i class="fas fa-users text-4xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-4">累計1000名以上の豊富な指導実績</h3>
+                    <h3 class="text-lg md:text-xl font-bold mb-3 md:mb-4">累計1000名以上の豊富な指導実績</h3>
                     <p class="text-sm opacity-90">オンライン・オフライン含め、1000人以上を指導してきた経験値に基づき、誰も置いていかない研修を実現します。</p>
                 </div>
                 <div class="text-center">
                     <i class="fas fa-award text-4xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-4">大手企業・官公庁も信頼するプロが研修を監修</h3>
+                    <h3 class="text-lg md:text-xl font-bold mb-3 md:mb-4">大手企業・官公庁も信頼するプロが研修を監修</h3>
                     <p class="text-sm opacity-90">味の素、サントリー、NTT西日本、三菱電機、官公庁などへのコンサル実績が豊富なプロフェッショナルが研修の設計を監修。現場で本当に使える本質的なノウハウを提供します。</p>
                 </div>
             </div>
@@ -1525,17 +1563,17 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }</style
     </section>
 
     <!-- 監修者紹介 -->
-    <section class="py-16 light-section">
+    <section class="py-10 md:py-16 light-section">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-12">監修者紹介</h2>
-            <div class="card-shadow bg-gray-50 p-8 rounded-xl">
-                <div class="flex flex-col md:flex-row items-center gap-8">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 md:mb-12">監修者紹介</h2>
+            <div class="card-shadow bg-gray-50 p-6 md:p-8 rounded-xl">
+                <div class="flex flex-col md:flex-row items-center gap-6 md:gap-8">
                     <div class="w-32 h-32 rounded-full overflow-hidden">
                         <img src="assets/images/common_photo23.jpg" alt="中村友厚氏" class="w-full h-full object-cover">
                     </div>
                     <div class="text-left">
                         <h3 class="text-2xl font-bold mb-2" style="color: var(--deep-ocean-2);">中村 友厚 氏</h3>
-                        <p class="text-lg mb-4">コンサルティングプロデュースジャパン</p>
+                        <p class="text-base md:text-lg mb-3 md:mb-4">コンサルティングプロデュースジャパン</p>
                         <p class="text-gray-700 mb-4">
                             大手コンサルティングファームでの実績を持ち、各自治体・地域行政に対する支援にも長年従事。
                             「成果の見える化」を軸にした仮説構築と実行支援を信条としています。
@@ -1553,18 +1591,17 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }</style
             <!-- SYNQAI会社情報 -->
             <div class="mt-12 card-shadow bg-gray-50 p-8 rounded-xl">
                 <img src="assets/images/2025-09-11_12.47.48.png" alt="SYNQAI監修者" class="w-full max-w-2xl mx-auto mb-8 rounded-lg">
-                <img src="assets/images/image 17.png" alt="SYNQAI" class="h-20 mx-auto mb-4">
-                <h3 class="text-xl font-bold mb-2">株式会社SYNQAI</h3>
+                <h3 class="text-lg md:text-xl font-bold mb-2">株式会社SYNQAI</h3>
                 <p class="text-gray-600 mb-4">［シンクエーアイ］</p>
                 <p class="text-gray-700 mb-2"><strong>主要事業内容：</strong> AI研修・AI導入支援・コンサルティング・ツール開発</p>
-                <p class="text-gray-700 mb-4"><strong>実績：</strong> AI向けにおいてSNS総フォロワー約3万人を誇り、法人・個人合わせて1000名以上のAI導入を支援。日本で2番目にAIに詳しき京（教える）のが得意な会社</p>
+                <p class="text-gray-700 mb-4"><strong>実績：</strong> AI発信においてSNS総フォロワー約3万人近くを誇り、法人・個人合わせて1000名以上のAI導入を支援。日本で2番目にAIに沼らせる（教える）のが得意な会社</p>
                 <a href="https://synqai.jp/" target="_blank" style="color: var(--deep-ocean-3);" class="hover:underline">https://synqai.jp/</a>
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section id="contact" class="py-20 hero-gradient text-white">
+    <section id="contact" class="py-12 md:py-20 hero-gradient text-white">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold mb-8">
                 「AI、何から手を付ければ…」その悩みを30分で明確にしませんか？
@@ -1606,17 +1643,9 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }</style
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="max-w-6xl mx-auto px-4">
+    <footer class="bg-gray-800 text-white py-8 md:py-12">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
             <div class="text-center">
-                <h3 class="text-2xl font-bold mb-4">株式会社SYNQAI</h3>
-                <div class="space-y-2">
-                    <p><strong>会社HP:</strong> <a href="https://synqai.jp/" class="text-blue-400 hover:underline">https://synqai.jp/</a></p>
-                    <p><strong>お問い合わせ先:</strong></p>
-                    <p>担当：中本 樹</p>
-                    <p>Email: <a href="mailto:t_nakamoto@synqai.jp" class="text-blue-400 hover:underline">t_nakamoto@synqai.jp</a></p>
-                    <p>Tel: <a href="tel:09098847219" class="text-blue-400 hover:underline">090-9884-7219</a></p>
-                </div>
                 <div class="mt-8 pt-8 border-t border-gray-700">
                     <p class="text-gray-400 text-sm">Copyright © SYNQAI Inc. All Rights Reserved.</p>
                 </div>
