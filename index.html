@@ -224,6 +224,9 @@
             font-weight: 600;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 4px 15px rgba(0, 172, 193, 0.3);
+            position: relative;
+            z-index: 10;
+            cursor: pointer;
         }
         
         .btn-primary:hover {
@@ -1007,8 +1010,8 @@ div[class="adsbygoogle"][id="ad-detector"] { display: block !important; }</style
                 <div class="text-lg">のAI導入支援実績</div>
             </div>
 
-            <div class="flex flex-col space-y-3 md:space-y-0 md:flex-row md:space-x-4 md:justify-center px-2 sm:px-4 md:px-0">
-                <a href="https://utage-system.com/r/Lfo986ClTu1K/register" class="btn-primary inline-block text-white px-4 py-3 md:px-8 md:py-4 rounded-lg text-sm sm:text-base md:text-lg font-semibold w-full md:w-auto">
+            <div class="flex flex-col space-y-3 md:space-y-0 md:flex-row md:space-x-4 md:justify-center px-2 sm:px-4 md:px-0" style="position: relative; z-index: 999;">
+                <a href="https://utage-system.com/r/Lfo986ClTu1K/register" class="btn-primary inline-block text-white px-4 py-3 md:px-8 md:py-4 rounded-lg text-sm sm:text-base md:text-lg font-semibold w-full md:w-auto" style="pointer-events: auto !important; position: relative; z-index: 1000;">
                     <span style="margin-right: 8px;">💬</span>
                     <span class="inline-block">「AI活用の悩みを30分で解消する」<br class="sm:hidden">無料相談に申し込む<br class="sm:hidden">（毎月10社限定）</span>
                 </a>
